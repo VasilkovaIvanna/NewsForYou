@@ -1,21 +1,19 @@
-name: Swift
+name: CI-Test
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 
 jobs:
-  build:
-
+  test:
+    name: Test
     runs-on: macos-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Force Xcode 13
-      run: sudo xcode-select -switch /Applications/Xcode_13.1.app
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      - name: Checkout
+        uses: actions/checkout@main
+        
+      - name: Build
+        run: |
+           xcodebuild clean build -workspace "NewsForYou.xcworkspace" -scheme "NewsForYou" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+      - name: Test
+        run: |
+           xcodebuild clean test -workspace "NewsForYou.xcworkspace" -scheme "NewsForYouTests" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO 
+           
