@@ -10,7 +10,7 @@ class PasswordValidationTests: XCTestCase {
     }
     
     func testPasswordValidationOnValidPasswords() throws {
-        let password  = "P@55W0rd"
+        let password  = "P@55W1rd"
         
         XCTAssertTrue(isValidPassword(text: password))
     }
