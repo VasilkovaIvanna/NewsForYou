@@ -6,16 +6,16 @@ on:
   pull_request:
     branches: [ master ]
 
+ 
 jobs:
-  build:
-
+  build-and-test:
     runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Force Xcode 13
-      run: sudo xcode-select -switch /Applications/Xcode_13.1.app
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_12.app
+
+    - name: Build and test
+      run: xcodebuild clean build test -workspace NewsForYou.xcworkspace -scheme "CI" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
