@@ -6,19 +6,15 @@ jobs:
   test:
     name: Test
     runs-on: macos-latest
-    strategy:
-        matrix:
-          destination: ['platform=iOS Simulator,OS=15.0,name=iPhone 11 Pro Max']
     steps:
       - name: Checkout
         uses: actions/checkout@main
+        
+        
       - name: Build
         run: |
-          xcodebuild clean build -project NewsForYou.xcodeproj -scheme NewsForYou -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-        env: 
-         destination: ${{ matrix.destination }}
+           xcodebuild clean build -workspace "NewsForYou.xcworkspace" -scheme "NewsForYou" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
       - name: Test
         run: |
-          xcodebuild clean test -project NewsForYou.xcodeproj -scheme NewsForYouTests -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-        env: 
-         destination: ${{ matrix.destination }}
+           xcodebuild clean test -workspace "NewsForYou.xcworkspace" -scheme "NewsForYouTests" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO 
+           
