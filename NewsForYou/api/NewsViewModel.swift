@@ -35,7 +35,7 @@ class NewsViewModel : NetworkProtocol, ObservableObject{
         }
     }
     
-    
+
     func requestNews(){
         self.isLoading = true
         service.getNews()
