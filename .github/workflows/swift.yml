@@ -1,12 +1,11 @@
 name: CI-Test
 
 on:
+  schedule:
+    - cron: '51 1 * * *'
   push:
   pull_request:
-  schedule:
-    - cron: '42 1 * * *'
-    
-    
+
 jobs:
   test:
     name: Test
