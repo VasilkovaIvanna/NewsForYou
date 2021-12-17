@@ -24,7 +24,6 @@
 		CA80D65F2764CD730045FF9C /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA80D65E2764CD730045FF9C /* SearchTests.swift */; };
 		CAFB14AC2762B25200D5ABDE /* ValidationCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB14AB2762B25200D5ABDE /* ValidationCheck.swift */; };
 		CAFB14AF2762B29200D5ABDE /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB14AE2762B29200D5ABDE /* CreatePasswordView.swift */; };
-		CAFB14B72762B2F200D5ABDE /* NewsForYouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB14B62762B2F200D5ABDE /* NewsForYouTests.swift */; };
 		CAFB14BF2762B32400D5ABDE /* EmailValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB14BE2762B32400D5ABDE /* EmailValidationTests.swift */; };
 		CAFB14C12762B7BA00D5ABDE /* PasswordValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB14C02762B7BA00D5ABDE /* PasswordValidationTests.swift */; };
 		CAFB14C32762BA7D00D5ABDE /* NewsResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB14C22762BA7D00D5ABDE /* NewsResponseTests.swift */; };
@@ -64,7 +63,6 @@
 		CAFB14AB2762B25200D5ABDE /* ValidationCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCheck.swift; sourceTree = "<group>"; };
 		CAFB14AE2762B29200D5ABDE /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		CAFB14B42762B2F200D5ABDE /* NewsForYouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsForYouTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAFB14B62762B2F200D5ABDE /* NewsForYouTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsForYouTests.swift; sourceTree = "<group>"; };
 		CAFB14BE2762B32400D5ABDE /* EmailValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationTests.swift; sourceTree = "<group>"; };
 		CAFB14C02762B7BA00D5ABDE /* PasswordValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationTests.swift; sourceTree = "<group>"; };
 		CAFB14C22762BA7D00D5ABDE /* NewsResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponseTests.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				342909A73D1948A43D1CA926 /* Pods-NewsForYouTests.debug.xcconfig */,
 				3E39BF1614DD438EAA64D5FD /* Pods-NewsForYouTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -116,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				CA377758275CE72A006DF685 /* NewsForYou */,
-				CAFB14B52762B2F200D5ABDE /* NewsForYouTests */,
 				CA377757275CE72A006DF685 /* Products */,
 				7F4335C23CCEC1F21F1E9F53 /* Pods */,
 				345ED95A8043AC2315DB8FAD /* Frameworks */,
@@ -193,14 +189,6 @@
 				CAFB14AE2762B29200D5ABDE /* CreatePasswordView.swift */,
 			);
 			path = signUp;
-			sourceTree = "<group>";
-		};
-		CAFB14B52762B2F200D5ABDE /* NewsForYouTests */ = {
-			isa = PBXGroup;
-			children = (
-				CAFB14B62762B2F200D5ABDE /* NewsForYouTests.swift */,
-			);
-			path = NewsForYouTests;
 			sourceTree = "<group>";
 		};
 		CAFB14BD2762B2FC00D5ABDE /* tests */ = {
@@ -385,7 +373,6 @@
 				CAFB14C32762BA7D00D5ABDE /* NewsResponseTests.swift in Sources */,
 				CAFB14C12762B7BA00D5ABDE /* PasswordValidationTests.swift in Sources */,
 				CA80D65F2764CD730045FF9C /* SearchTests.swift in Sources */,
-				CAFB14B72762B2F200D5ABDE /* NewsForYouTests.swift in Sources */,
 				CAFB14BF2762B32400D5ABDE /* EmailValidationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

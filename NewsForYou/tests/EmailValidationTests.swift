@@ -10,7 +10,7 @@ class CheckValidationTests: XCTestCase {
     }
     
     func testEmailValidationOnValidEmail() throws {
-        let email : String = "example@gmail.com"
+        let email : String = "examplegmailcom"
         
         XCTAssertTrue(isValidEmail(email))
         
